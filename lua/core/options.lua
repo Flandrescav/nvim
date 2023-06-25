@@ -15,3 +15,8 @@ opt.cul = true
 
 opt.termguicolors = true
 opt.signcolumn = "yes"
+
+--Indent
+opt.list = true
+opt.listchars:append "space:⋅"
+opt.listchars:append "eol:↴"
