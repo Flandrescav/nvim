@@ -1,14 +1,13 @@
 return {
   {
-    event = "VeryLazy",
     "neovim/nvim-lspconfig",
     dependencies = {
       "williamboman/mason-lspconfig.nvim",
       "williamboman/mason.nvim",
       "folke/neodev.nvim",
       "hrsh7th/cmp-nvim-lsp",
-    },
- 
+    }, 
+
   config = function()
       require("mason").setup()
       require("neodev").setup({})
@@ -88,6 +87,19 @@ return {
               staticcheck = true,
             },
           },
+      })
+
+      require("lspconfig").rust_analyzer.setup({
+        on_attach = on_attach,
+        capabilities = capabilities,
+        filetypes = {"rust"},
+        settings = {
+          ['rust-analyzer'] = {
+            diagnostic = {
+              endble = true,
+            },
+          },
+        },
       })
   end,
 }
