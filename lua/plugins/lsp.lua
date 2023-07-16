@@ -101,6 +101,13 @@ return {
           },
         },
       })
-  end,
+
+      require("lspconfig").clangd.setup({
+        on_attach = on_attach,
+        capabilities = capabilities,
+        cmd = { "clangd" },
+        filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto"},
+      })
+ end,
 }
 }

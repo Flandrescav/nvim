@@ -8,7 +8,7 @@ return {
               node_incremental = "v",
             },
           },
-          ensure_inctalcen = { "c", "lua", "vim", "go", "java", "json", "python","rust"},
+          ensure_inctalcen = { "c", "lua", "vim", "go", "java", "json", "python","rust","html","css"},
           sync_install = false,
           auto_install = true,
           highlight = {
