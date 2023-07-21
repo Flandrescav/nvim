@@ -11,10 +11,16 @@ return {
 
     -- Uses shell commands
     external = {
-      markdown = "glow %",
-      python   = "python3 %",
-      go       = "go run %",
-      sh       = "sh %"
+      typescript = "deno run %",
+      javascript = "node %",
+      markdown   = "glow %",
+      python     = "python3 %",
+      go         = "go run %",
+      sh         = "sh %",
+      c          = "gcc % -o $fileBase && ./$fileBase && rm $fileBase",
+      rust       = "rustc % && ./$fileBase && rm $fileBase",
+      cpp        = "g++ % -o $fileBase && ./$fileBase",
+      java       = "javac $fileBase.java && java $fileBase",
     }
   },
 

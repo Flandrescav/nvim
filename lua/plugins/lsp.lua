@@ -6,11 +6,18 @@ return {
       "williamboman/mason.nvim",
       "folke/neodev.nvim",
       "hrsh7th/cmp-nvim-lsp",
+      "nvimdev/lspsaga.nvim",
+      {
+        "j-hui/fidget.nvim",
+        tag = "legacy",
+      }
     }, 
 
   config = function()
       require("mason").setup()
       require("neodev").setup({})
+      require("fidget").setup()
+      require("lspsaga").setup()
       require("mason-lspconfig").setup({
               ensure_installed = {
                       "lua_ls",
